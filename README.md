@@ -14,4 +14,61 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# React-Expense-Tracker
+# RTK Todo App (RTK Query) ✅
+
+A simple Todo app built with *React + Redux Toolkit (RTK Query)*.  
+It performs *CRUD* operations (Create, Read, Update, Delete) using a *cloud API (MockAPI)* and is deployed on *Netlify*.
+
+---
+
+## ✨ Features
+
+- Fetch tasks using *RTK Query*
+- Add new task
+- Toggle complete / incomplete
+- Delete task
+- Loading & error states
+- Deployed frontend (Netlify) + online backend (MockAPI)
+
+---
+
+## 🧰 Tech Stack
+
+- React (Vite)
+- Redux Toolkit
+- RTK Query
+- MockAPI (REST backend)
+- Netlify (deployment)
+
+---
+
+## 🌐 Live Demo
+
+- Live Site:https://rtk-todoapp.netlify.app/
+- API Base URL: https://698a5634c04d974bc6a1fb01.mockapi.io
+- Resource: /tasks
+
+---
+
+## 📌 API Endpoints
+
+- GET /tasks → get all tasks  
+- POST /tasks → create a task  
+- PUT /tasks/:id → update a task  
+- DELETE /tasks/:id → delete a task  
+
+Example Task shape:
+
+```json
+{
+  "id": "e775",
+  "value": "Complete RTK Query",
+  "completed": true
+}
+
+🚀 Run Locally
+
+Install dependencies:
+npm install
+Start dev server:
+npm run dev

@@ -1,29 +1,31 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import { Provider } from "react-redux"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import Home from "./Home.jsx";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { api } from "./ApiSlice.jsx";
 
-import store from "./store"
-import App1 from "./App1"
-import Home from "./pages/Home"
-import Cart from "./pages/Cart"
-import   './App.css'
+import "./App.css";
+import { ApiProvider } from "@reduxjs/toolkit/query/react";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App1 />,
+    element: <ApiProvider api={api}>
+        <App />
+        </ApiProvider>,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/cart", element: <Cart /> },
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <p>Contact Us</p>,
+      },
     ],
   },
-])
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  </React.StrictMode>
-)
+  <RouterProvider router={router} />,
+);

@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+script.js
+src/expense-tracker
+src/shopping-cart
 
 # Editor directories and files
 .vscode/*
